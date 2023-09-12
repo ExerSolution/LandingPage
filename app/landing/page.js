@@ -1,5 +1,4 @@
 
-import $ from "jquery";
 export default function Landing() {
 
   return (
