@@ -21,7 +21,7 @@ export default function Landing() {
       <Navbar.Collapse>
           <Navbar.Link href="#" className="block mt-6 lg:text-3xl font-semibold pl-1 pr-4 text-white rounded md:bg-transparent md: text-base text-blue-700 md:p-0 md:dark:text-blue-500 " aria-current="page">Home</Navbar.Link>
           <Navbar.Link href="#about" className="block mt-6 lg:text-3xl font-semibold pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 text-base dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</Navbar.Link>
-          <img className="rounded-full w-20 h-20" src="./img/logo.png" alt="image description" />
+          <Image className="rounded-full w-20 h-20" src="./img/logo.png" alt="image description" />
           <Navbar.Link href="#project" className="block mt-6 lg:text-3xl font-semibold pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 text-base dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Project</Navbar.Link>
           <Navbar.Link href="#contact" className="block mt-6 lg:text-3xl font-semibold pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 text-base dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</Navbar.Link>     
       </Navbar.Collapse>
@@ -68,8 +68,7 @@ export default function Landing() {
             <h3 className="text-lg font-semibold text-white-900 dark:text-white">Brgy Santa Lucia St, Poblacion, Koronadal City, 9506 South Cotabato</h3>
             <time className="block mb-2 text-base font-normal leading-none text-purple-400 dark:text-purple-500">S.Y 2019-2023</time>
             <p className="text-xl font-normal text-blue-500 dark:text-blue-400">STI College Korondal</p>
-            <img className="a_img h-auto max-w-lg transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0" src="./img/college1.png" alt="image description"/>
-        </div>
+           </div>
     </li>
     
     <li className="relative mb-6 sm:mb-0">
@@ -85,8 +84,7 @@ export default function Landing() {
             <h3 className="text-lg font-semibold text-white-900 dark:text-white">Brgy Santa Lucia St, Poblacion, Koronadal City, 9506 South Cotabato</h3>
             <time className="block mb-2 text-base font-normal leading-none text-purple-400 dark:text-purple-500">S.Y 2017-2019</time>
             <p className="text-xl font-normal text-blue-500 dark:text-blue-400">STI College Korondal</p>
-            <img className="a_img h-auto max-w-lg transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0" src="./img/shs.jpg" alt="image description"/>
-        </div>
+             </div>
     </li>
     <li className="relative mb-6 sm:mb-0">
         <div className="flex items-center">
