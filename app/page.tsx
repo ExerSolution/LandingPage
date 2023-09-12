@@ -50,7 +50,7 @@ export default function Landing() {
 <div id='about' className='mt-5 w-30' style={{marginTop:'20',paddingBottom:300, border:'1px solid black'}}>
   <div className="inline-flex items-center justify-center w-full" style={{marginTop:100}}>
     <hr className="w-64 h-1 my-8   bg-gray-200 border-0 rounded dark:bg-gray-700"/>
-    <h1 className='text-5xl pl-4 pr-4'> Educational Background  </h1>
+    <h1 className='text-5xl pl-4 pr-4 mb-20'> Educational Background  </h1>
     <hr className="w-64 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700"/>
 </div>
 <div className='flex justify-center mt-7'>
