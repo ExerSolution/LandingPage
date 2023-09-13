@@ -68,7 +68,7 @@ export default function Landing() {
             <h3 className="text-lg font-semibold text-white-900 dark:text-white">Brgy Santa Lucia St, Poblacion, Koronadal City, 9506 South Cotabato</h3>
             <time className="block mb-2 text-base font-normal leading-none text-purple-400 dark:text-purple-500">S.Y 2019-2023</time>
             <p className="text-xl font-normal text-blue-500 dark:text-blue-400">STI College Korondal</p>
-            {/* <img className="a_img h-auto max-w-lg transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0" src="./img/college1.png" alt="image description"/> */}
+            <img className="a_img h-auto max-w-lg transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0" src="./img/college1.png" alt="image description"/>
         </div>
     </li>
     
@@ -85,7 +85,7 @@ export default function Landing() {
             <h3 className="text-lg font-semibold text-white-900 dark:text-white">Brgy Santa Lucia St, Poblacion, Koronadal City, 9506 South Cotabato</h3>
             <time className="block mb-2 text-base font-normal leading-none text-purple-400 dark:text-purple-500">S.Y 2017-2019</time>
             <p className="text-xl font-normal text-blue-500 dark:text-blue-400">STI College Korondal</p>
-            {/* <img className="a_img h-auto max-w-lg transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0" src="./img/shs.jpg" alt="image description"/> */}
+            <img className="a_img h-auto max-w-lg transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0" src="./img/shs.jpg" alt="image description"/>
         </div>
     </li>
     <li className="relative mb-6 sm:mb-0">
