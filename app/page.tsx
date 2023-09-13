@@ -21,7 +21,7 @@ export default function Landing() {
       <Navbar.Collapse>
           <Navbar.Link href="#" className="block mt-6 lg:text-3xl font-semibold pl-1 pr-4 text-white rounded md:bg-transparent md: text-base text-blue-700 md:p-0 md:dark:text-blue-500 " aria-current="page">Home</Navbar.Link>
           <Navbar.Link href="#about" className="block mt-6 lg:text-3xl font-semibold pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 text-base dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</Navbar.Link>
-          {/* <img className="rounded-full w-20 h-20" src="./img/logo.png" alt="image description" /> */}
+          <img className="rounded-full w-20 h-20" src="./img/logo.png" alt="image description" />
           <Navbar.Link href="#project" className="block mt-6 lg:text-3xl font-semibold pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 text-base dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Project</Navbar.Link>
           <Navbar.Link href="#contact" className="block mt-6 lg:text-3xl font-semibold pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 text-base dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</Navbar.Link>     
       </Navbar.Collapse>
