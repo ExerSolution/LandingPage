@@ -33,81 +33,33 @@ body {
 }
 
 /* this is the slide style */
-#galleries-list .content {
+.slideshow-container {
+  width: 30%; /* Set the width to 30% */
+  margin: 0 auto; /* Center the container horizontally */
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.slideshow-wrapper {
+  display: inline-block;
+  animation: marquee 10s linear infinite;
+}
+
+.slideshow-item {
+  display: inline-block;
+  margin-right: 20px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
   width: 100px;
   height: 100px;
-  text-align: center;
-  background: lightgrey;
-  padding: 4% 0;
-  padding: 10% 0;
-  margin: auto;
-  box-sizing: border-box;
-  font-size: 40px;
 }
 
-#galleries-list {
-	float: left;
-	padding: 0px;
-	margin: 0px;
-	overflow:hidden;
-  width:100%;
+@keyframes marquee {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
 }
-
-#galleries-list ul {
-	width: 100%;
-	list-style: none;
-	margin: 0px;
-	padding: 0px;
-}
-
-#galleries-list ul li {
-    position: relative;
-    left: 0px;
-    float: left;
-    width: 25%;
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
-    transition: left .75s ease-out;
-}
-
-#galleries-list ul li a{
-	color: white;
-}
-
-#galleries-list ul li p{
-	padding: 0px 15px 0px 15px;
-	font-size: 15px;
-	color: #758a9f !important;
-}
-
-#galleries-list ul li h2{
-	font-size: 25px;
-	color: white;
-}
-
-#galleries-list .slider-nav {
-	position: relative;
-	float: left;
-	left: calc(50% - 45px);
-}
-
-#galleries-list .slide-left {
-	margin-right: 10px;
-}
-
-#galleries-list .slide-left, #galleries-list .slide-right {
-	cursor: pointer;
--webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Chrome/Safari/Opera */
-     -khtml-user-select: none; /* Konqueror */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  not supported by any browser */
-}
-
-#galleries-list .slide-left:hover, #galleries-list .slide-right:hover {
-	font-weight: 700;
-}
-/* end of slide style */
+/* this is the end of slide style */
