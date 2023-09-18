@@ -63,3 +63,9 @@ body {
   }
 }
 /* this is the end of slide style */
+
+/* card image hover */
+/* .card:hover .product-image {
+  transform: translate(-1.5rem, -7rem) rotate(-5deg);
+} */
+/* end of card image hover */
