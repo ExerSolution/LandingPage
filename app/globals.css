@@ -68,3 +68,17 @@ body {
   transform: translate(-1.5rem, -7rem) rotate(-5deg);
 } */
 /* end of card image hover */
+
+@media (max-width: 768px) {
+  .hidden-on-small-screen {
+    display: none;
+  }
+  .colls{
+    background-color: white;
+  }
+}
+
+
+
+
+

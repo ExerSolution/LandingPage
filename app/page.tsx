@@ -9,18 +9,18 @@ export default function Landing() {
      <Navbar    
       fluid 
     className='flex justify-center border-b-4 bg-white border-rose-500 ' style={{height:60}}>
-      <Navbar.Brand className='lg:hidden md:hidden'>
+      <Navbar.Brand className='lg:hidden md:hidden absolute left-14 top-0 h-16 w-16'>
         <span className="text-gray-900 whitespace-nowrap lg:text-4xl md:text-base font-semibold dark:text-white" style={{marginLeft:-50}}>
           ExSYaseru21_Tv
         </span>
       </Navbar.Brand>
-      <div className="flex justify-left md:order-2 "style={{marginLeft:200,marginRight:-35}}>
+      <div className="absolute mt-2 inset-y-0 right-0 md:order-2 ">
         <Navbar.Toggle/>
       </div>
-      <Navbar.Collapse className='md:ml-20'>
-          <Navbar.Link href="#" className="block mt-1 lg:text-2xl font-semibold pl-1 pr-4 text-white rounded md:bg-transparent md: text-base text-blue-700 md:p-0 md:dark:text-blue-500 " aria-current="page">Home</Navbar.Link>
+      <Navbar.Collapse className='md:ml-20 lg:w-96 colls'>
+          <Navbar.Link href="#" className="block mt-1 lg:text-2xl font-semibold pl-3 pr-4 text-white bg-white rounded md:bg-transparent md: text-base text-blue-700 md:p-0 md:dark:text-blue-500 " aria-current="page">Home</Navbar.Link>
           <Navbar.Link href="#about" className="block mt-1 lg:text-2xl font-semibold pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 text-base dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</Navbar.Link>
-          <img className="bg-white w-24 h-24 rounded-full border-b-4 border-rose-500" style={{marginTop:-23}} src="./img/logo.png" alt="image description" />
+          <img className="bg-white w-24 h-24 rounded-full border-b-4 border-rose-500 hidden-on-small-screen" style={{marginTop:-23}} src="./img/logo.png" alt="image description" />
           <Navbar.Link href="#project" className="block mt-1 lg:text-2xl font-semibold pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 text-base dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Project</Navbar.Link>
           <Navbar.Link href="#contact" className="block mt-1 lg:text-2xl font-semibold pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 text-base dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</Navbar.Link>     
       </Navbar.Collapse>
@@ -145,7 +145,7 @@ export default function Landing() {
     </div>
 </div>
 {/* project div */}
-<h1 className='flex justify-center text-5xl pb-8'>Project</h1> 
+<h1 id='project' className='flex justify-center text-5xl pb-8'>Project</h1> 
 <div className='flex justify-center'>
 <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-5xl">
   <div className="md:flex">
@@ -162,7 +162,7 @@ export default function Landing() {
 </div>
 
 {/* contact div */}
-<div className='mt-20 pb-20'>
+<div id='contact' className='mt-20 pb-20'>
 <h1 className='flex justify-center text-5xl pb-8'>Contact</h1> 
 <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl ">
   <div className="md:inline">
