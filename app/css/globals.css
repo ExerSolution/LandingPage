@@ -64,18 +64,35 @@ body {
 /* this is the end of slide style */
 
 /* card image hover */
-/* .card:hover .product-image {
+/* .card:hover .product-image { 
   transform: translate(-1.5rem, -7rem) rotate(-5deg);
 } */
 /* end of card image hover */
-
+main .formy .forms{
+  width:800px;
+}
 @media (max-width: 768px) {
   .hidden-on-small-screen {
     display: none;
   }
+  
   .colls{
     background-color: white;
+    border-radius: 4px;
+    margin-top: 20px;
+    width: 200px;
+    margin-right: -200px;
   }
+  .colls:hover{
+    background-color: rgb(119, 116, 116);
+  }
+  .toggle:hover{
+    border: 2px gray solid;
+    border-radius: 4px;
+  }
+  main .formy .forms{
+    width:500px;
+  } 
 }
 
 

@@ -3,6 +3,8 @@ import { Baloo_2, Cairo_Play } from 'next/font/google'
 import { Button, Card, Navbar } from 'flowbite-react'
 import { Checkbox, Label, Modal, TextInput } from 'flowbite-react';
 import { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const adventpro = Cairo_Play({ subsets: ['latin'], weight:['800'] })
 export default function Landing() {
@@ -23,9 +25,9 @@ export default function Landing() {
         <Navbar.Toggle className='toggle'/>
       </div>
       <Navbar.Collapse className='lg:w-96 colls'>
-          <Navbar.Link href="#" className="ho block mt-1 lg:text-2xl font-semibold pl-3 pr-4 text-white bg-white rounded md:bg-transparent md: text-base text-blue-700 md:p-0 md:dark:text-blue-500 " aria-current="page">Home</Navbar.Link>
+          <Navbar.Link href="#" className="ho block mt-1 lg:text-2xl font-semibold pl-3 pr-4 bg-white rounded md:bg-transparent md: text-base text-blue-700 md:p-0 md:dark:text-blue-500 " aria-current="page">Home</Navbar.Link>
           <Navbar.Link href="#about" className="ho block mt-1 lg:text-2xl font-semibold pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 text-base dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</Navbar.Link>
-          <img className="bg-white w-24 h-24 rounded-full border-b-4 border-rose-500 hidden-on-small-screen" style={{marginTop:-23}} src="./img/logo.png" alt="image description" />
+          <Image width={500} height={300} className="bg-white w-24 h-24 rounded-full border-b-4 border-rose-500 hidden-on-small-screen" style={{marginTop:-23}} src="/img/logo.png" alt="image description" />
           <Navbar.Link href="#project" className="ho block mt-1 lg:text-2xl font-semibold pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 text-base dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Project</Navbar.Link>
           <Navbar.Link href="#contact" className="ho block mt-1 lg:text-2xl font-semibold pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 text-base dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</Navbar.Link>     
       </Navbar.Collapse>
@@ -40,14 +42,14 @@ export default function Landing() {
   <p className='ml-5 lg:text-5xl text-3xl pt-20 pb-20'>I&apos;m Yasser S. Magelna</p>
   </div> 
   <div className='pb-20' style={{paddingBottom:'150px'}}> 
-  <a href='#about' className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+  <Link href='#about' className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
   <span className="text-2xl relative px-5 py-2.5 transition-all ease-in duration-75 dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
       About
   </span>
     <svg className="w-6 h-4 ml-2 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M1 5h12m0 0L9 1m4 4L9 9"/>
   </svg>
-</a>
+</Link>
 <button onClick={() => props.setOpenModal('form-elements')} data-modal-target="authentication-modal"  data-modal-toggle="authentication-modal" className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group border border-gradient-2 bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
   <span className="relative text-2xl px-5 py-2.5 transition-all ease-in duration-75 dark:bg-gray-900 bg-white rounded-md group-hover:bg-opacity-0">
       Login
@@ -82,9 +84,9 @@ export default function Landing() {
             </div>
             <div className="flex justify-between text-sm font-medium text-gray-500 dark:text-gray-300">
               Not registered?&nbsp;
-              <a href="/modal" className="text-cyan-700 hover:underline dark:text-cyan-500">
+              <Link href="/auth/signup" className="text-cyan-700 hover:underline dark:text-cyan-500">
                 Create account
-              </a>
+              </Link>
             </div>
           </div>
         </Modal.Body>
@@ -114,7 +116,7 @@ export default function Landing() {
             <h3 className="text-lg mt-3 font-semibold text-white-900 dark:text-white">Brgy Santa Lucia St, Poblacion, Koronadal City, 9506 South Cotabato</h3>
             <time className="block mb-2 text-base font-normal leading-none text-purple-400 dark:text-purple-500">S.Y 2019-2023</time>
             <p className="text-xl font-normal text-blue-500 dark:text-blue-400">STI College Korondal</p>
-            <img className="a_img h-auto max-w-md mt-2 transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0" src="./img/college1.png" alt="image description"/>
+            <Image width={500} height={300} className="a_img h-auto max-w-md mt-2 transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0" src="/img/college1.png" alt="image description"/>
         </div>
     </li>
     
@@ -131,8 +133,8 @@ export default function Landing() {
             <h3 className="text-lg font-semibold text-white-900 dark:text-white">Brgy Santa Lucia St, Poblacion, Koronadal City, 9506 South Cotabato</h3>
             <time className="block mb-2 text-base font-normal leading-none text-purple-400 dark:text-purple-500">S.Y 2017-2019</time>
             <p className="text-xl font-normal text-blue-500 dark:text-blue-400">STI College Korondal</p>
-            <img className="a_img h-auto max-w-md mt-2 transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0" src="./img/shs.jpg" alt="image description"/>
-        </div>
+            <Image width={500} height={300} className="a_img h-auto max-w-md mt-2 transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0" src="/img/shs.jpg" alt="image description"/> 
+            </div>
     </li>
     <li className="relative mb-6 sm:mb-0 mx-4">
         <div className="flex items-center">
@@ -167,22 +169,22 @@ export default function Landing() {
 <h1 className='text-3xl mt-5 flex justify-center text-pink-300 pr-3'>Front-End</h1>
   <div className="flex justify-center slideshow-container md:max-w-3xl">
         <div className="slideshow-wrapper">
-        <img className='slideshow-item text-orange-500' src='./icons/html-5.svg'/>
-        <img className='slideshow-item' src='./icons/css-3.svg'/>
-        <img className='slideshow-item' src='./icons/bootstrap.svg'/>
-        <img className='slideshow-item' src='./icons/tailwindcss.svg'/>
-        <img className='slideshow-item' src='./icons/Flowbite.svg'/>
-        <img className='slideshow-item' src='./icons/react.svg'/>
+        <Image width={500} height={300} className='slideshow-item text-orange-500' src='../icons/html-5.svg' alt={'htmlicon'}/>
+        <Image width={500} height={300} className='slideshow-item' src='../icons/css-3.svg' alt={'cssicon'}/>
+        <Image width={500} height={300} className='slideshow-item' src='../icons/bootstrap.svg' alt={'bootstrapicon'}/>
+        <Image width={500} height={300} className='slideshow-item' src='../icons/tailwindcss.svg' alt={'tailwindicon'}/>
+        <Image width={500} height={300} className='slideshow-item' src='../icons/Flowbite.svg' alt={'flowbiteicon'}/>
+        <Image width={500} height={300} className='slideshow-item' src='../icons/react.svg' alt={'reacticon'}/>
         </div>
     </div>
     <h1 className='text-3xl mt-5 flex justify-center text-yellow-100 pr-3'>Back-End</h1>
   <div className="flex justify-center slideshow-container md:max-w-3xl">
         <div className="slideshow-wrapper">
-        <img className='slideshow-item' src='./icons/csharp.svg'/>
-        <img className='slideshow-item' src='./icons/java.svg'/>
-        <img className='slideshow-item' src='./icons/javascript.svg'/>
-        <img className='slideshow-item' src='./icons/mysql.svg'/>
-        <img className='slideshow-item' src='./icons/next-js.svg'/>
+        <Image width={500} height={300} className='slideshow-item' src='../icons/csharp.svg' alt={'csharpicon'}/>
+        <Image width={500} height={300} className='slideshow-item' src='../icons/java.svg' alt={'javaicon'}/>
+        <Image width={500} height={300} className='slideshow-item' src='../icons/javascript.svg' alt={'javascripticon'}/>
+        <Image width={500} height={300} className='slideshow-item' src='../icons/mysql.svg' alt={'mysqlicon'}/>
+        <Image width={500} height={300} className='slideshow-item' src='../icons/next-js.svg' alt={'nextjsicon'}/>
         </div>
     </div>
 </div>
@@ -191,15 +193,15 @@ export default function Landing() {
 <div className='flex justify-center'>
 <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-5xl">
   <div className="md:flex">
-      <img className="h-48 w-full bg-cover bg-center md:h-full md:w-48" src="./img/p1.png" alt="Modern building architecture"/>
+      <Image width={500} height={300} className="h-48 w-full bg-cover bg-center md:h-full md:w-48" src="/img/p1.png" alt="Modern building architecture"/>
     <div className="p-8">
       <div className="uppercase tracking-wide text-2xl text-indigo-500 font-semibold">Web-Based Market Stall Rental Collection Management System with SMS Notification for Mallengke of Municipality of Surallah
         </div>
       <p className="mt-2 text-slate-500">The Market Stall Rental Collection Management System is a web-based software that allows users to do their usual tasks digitally, such as submitting applications, approving lessee, recording information, and other transactions.</p>
     </div>  
-  </div>
-    <img className='w-auto h-auto' src='./img/p2.png'/>
-    <img className='w-auto h-fit' src='./img/p3.png'/>
+  </div>  
+    <Image width={900} height={300} className='w-auto h-auto' src='/img/p2.png' alt={''}/>
+    <Image width={900} height={300} className='w-auto h-fit' src='/img/p3.png' alt={''}/>
 </div>
 </div>
 
@@ -208,18 +210,18 @@ export default function Landing() {
 <h1 className='flex justify-center text-5xl pb-8'>Contact</h1> 
 <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl ">
   <div className="md:inline">
-  <img className="h-80 w-full flex justify-center object-cover" src="/img/prof.png" alt="Modern building architecture"/>
-      <a href="#" className="z-50 block mt-1 text-lg leading-tight font-medium text-black hover:underline flex justify-center">yassermagelna.gmail.com</a>
-      <p className="z-50 block mt-1 text-lg leading-tight font-medium text-black pb-2 flex justify-center">09654508419</p>
+  <Image width={500} height={300} className="h-80 w-full flex justify-center object-cover" src="/img/prof.png" alt="Modern building architecture"/>
+      <Link href="#" className="z-50 mt-1 text-lg leading-tight font-medium text-black hover:underline flex justify-center">yassermagelna.gmail.com</Link>
+      <p className="z-50 mt-1 text-lg leading-tight font-medium text-black pb-2 flex justify-center">09654508419</p>
       <div className="flex justify-center uppercase tracking-wide text-2xl text-indigo-500 font-semibold">Social Links</div>
       <div className="flex justify-center pb-4">
-<a href='https://discord.gg/v6GKxxhxDT'><img className="h-auto w-10 rounded-lg" src="./icons/sociallinks/discord.png" alt="image description"/></a>
-<a href='https://github.com/ExerSolution'><img className="h-auto w-10 rounded-lg" src="./icons/sociallinks/github.png" alt="image description"/></a>
-<a href='https://www.twitch.tv/exsyaseru21_tv'><img className="h-auto w-10 rounded-lg" src="./icons/sociallinks/twitch.png" alt="image description"/></a>
-<a href='https://www.youtube.com/@exersolution'><img className="h-auto w-10 rounded-lg" src="./icons/sociallinks/youtube.png" alt="image description"/></a>
-<a href='https://www.facebook.com/ExerSolution/'><img className="h-auto w-10 rounded-lg" src="./icons/sociallinks/facebook.png" alt="image description"/></a>
-<a href='https://www.instagram.com/exerssolution/'><img className="h-auto w-10 rounded-lg" src="./icons/sociallinks/instagram.png" alt="image description"/></a>
-<a href='https://twitter.com/Yaseru211'><img className="h-auto w-10 rounded-lg" src="./icons/sociallinks/twitter.png" alt="image description"/></a>
+<Link href='https://discord.gg/v6GKxxhxDT'><Image width={500} height={300} className="h-auto w-10 rounded-lg" src="/icons/sociallinks/discord.png" alt="image description"/></Link>
+<Link href='https://github.com/ExerSolution'><Image width={500} height={300} className="h-auto w-10 rounded-lg" src="/icons/sociallinks/github.png" alt="image description"/></Link>
+<Link href='https://www.twitch.tv/exsyaseru21_tv'><Image width={500} height={300} className="h-auto w-10 rounded-lg" src="/icons/sociallinks/twitch.png" alt="image description"/></Link>
+<Link href='https://www.youtube.com/@exersolution'><Image width={500} height={300} className="h-auto w-10 rounded-lg" src="/icons/sociallinks/youtube.png" alt="image description"/></Link>
+<Link href='https://www.facebook.com/ExerSolution/'><Image width={500} height={300} className="h-auto w-10 rounded-lg" src="/icons/sociallinks/facebook.png" alt="image description"/></Link>
+<Link href='https://www.instagram.com/exerssolution/'><Image width={500} height={300} className="h-auto w-10 rounded-lg" src="/icons/sociallinks/instagram.png" alt="image description"/></Link>
+<Link href='https://twitter.com/Yaseru211'><Image width={500} height={300} className="h-auto w-10 rounded-lg" src="/icons/sociallinks/twitter.png" alt="image description"/></Link>
 
 </div> 
   </div>

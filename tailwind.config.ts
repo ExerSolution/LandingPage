@@ -26,7 +26,7 @@ const config: Config = {
       },
       fontFamily: {
         'body': [
-      'Roboto', 
+      'Roboto',   
       'ui-sans-serif', 
       'system-ui', 
       '-apple-system', 
