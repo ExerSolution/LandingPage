@@ -7,22 +7,32 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const adventpro = Cairo_Play({ subsets: ['latin'], weight:['800'] })
+
 export default function Landing() {
+  const [isActive, setIsActive] = useState(false);
+
+  const handleToggleClick = () => {
+    setIsActive(!isActive);
+  };
     const [openModal, setOpenModal] = useState<string | undefined>();
       const [email, setEmail] = useState("");
       const props = { openModal, setOpenModal, email, setEmail };
+
+      
   return (
     <main className={`md:w-auto ${adventpro.className}`} style={{ backgroundColor: '#111827' }}>
      <Navbar    
-      fluid 
-    className='flex justify-center border-b-4 bg-white border-rose-500 ' style={{height:60}}>
+       fluid
+       className='flex justify-center border-b-4 bg-white border-rose-500'
+       style={{ height: 60 }}
+     >
       <Navbar.Brand className='lg:hidden md:hidden absolute left-5 top-0 h-16 w-16'>
        <span className=" flex justify-center text-gray-900 whitespace-nowrap text-xl lg:text-4xl md:text-base font-semibold dark:text-white">
           ExSYaseru21_Tv
         </span>
       </Navbar.Brand>
-      <div className="absolute mt-2 inset-y-0 right-0 md:order-2 ">
-        <Navbar.Toggle className='toggle'/>
+      <div className="absolute mt-2 inset-y-0 right-0 md:order-2" onClick={handleToggleClick}>
+        <Navbar.Toggle className={`${isActive ? 'active-toggle' : ''}`} />
       </div>
       <Navbar.Collapse className='lg:w-96 colls'>
           <Navbar.Link href="#" className="ho block mt-1 lg:text-2xl font-semibold pl-3 pr-4 bg-white rounded md:bg-transparent md: text-base text-blue-700 md:p-0 md:dark:text-blue-500 " aria-current="page">Home</Navbar.Link>
@@ -101,7 +111,7 @@ export default function Landing() {
     <h1 className='text-5xl pl-4 pr-4 mb-20'> Educational Background  </h1>
     <hr className="lg:w-24 h-1 bg-gray-200 border-0 rounded dark:bg-gray-700" style={{marginTop:-70}}/>
 </div>
-<div className='flex justify-center md:max-w-8xl'>
+<div className='flex justify-center md:max-w-8xl lg:flex md:inline-block'>
 <ol className="justify-center md:w-fit md:flex">
     <li className="relative mb-6 md:mb-0 mx-4">
         <div className="flex items-center">
@@ -218,7 +228,7 @@ export default function Landing() {
 <Link href='https://discord.gg/v6GKxxhxDT'><Image width={500} height={300} className="h-auto w-10 rounded-lg" src="/icons/sociallinks/discord.png" alt="image description"/></Link>
 <Link href='https://github.com/ExerSolution'><Image width={500} height={300} className="h-auto w-10 rounded-lg" src="/icons/sociallinks/github.png" alt="image description"/></Link>
 <Link href='https://www.twitch.tv/exsyaseru21_tv'><Image width={500} height={300} className="h-auto w-10 rounded-lg" src="/icons/sociallinks/twitch.png" alt="image description"/></Link>
-<Link href='https://www.youtube.com/@exersolution'><Image width={500} height={300} className="h-auto w-10 rounded-lg" src="/icons/sociallinks/youtube.png" alt="image description"/></Link>
+<Link href='https://www.youtube.com/@exsyaseru21_tv'><Image width={500} height={300} className="h-auto w-10 rounded-lg" src="/icons/sociallinks/youtube.png" alt="image description"/></Link>
 <Link href='https://www.facebook.com/ExerSolution/'><Image width={500} height={300} className="h-auto w-10 rounded-lg" src="/icons/sociallinks/facebook.png" alt="image description"/></Link>
 <Link href='https://www.instagram.com/exerssolution/'><Image width={500} height={300} className="h-auto w-10 rounded-lg" src="/icons/sociallinks/instagram.png" alt="image description"/></Link>
 <Link href='https://twitter.com/Yaseru211'><Image width={500} height={300} className="h-auto w-10 rounded-lg" src="/icons/sociallinks/twitter.png" alt="image description"/></Link>

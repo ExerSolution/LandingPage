@@ -68,6 +68,7 @@ body {
   transform: translate(-1.5rem, -7rem) rotate(-5deg);
 } */
 /* end of card image hover */
+
 main .formy .forms{
   width:800px;
 }
@@ -86,9 +87,8 @@ main .formy .forms{
   .colls:hover{
     background-color: rgb(119, 116, 116);
   }
-  .toggle:hover{
-    border: 2px gray solid;
-    border-radius: 4px;
+  .active-toggle {
+    border: 2px solid rgb(58, 58, 58); /* Change the border styles as per your requirement */
   }
   main .formy .forms{
     width:500px;
