@@ -1,3 +1,5 @@
+
+import { QueryClient } from "react-query";
 import "./css/globals.css";
 import type { Metadata } from 'next'
 
