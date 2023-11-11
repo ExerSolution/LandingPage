@@ -1,8 +1,9 @@
 "use client";
 
+import { useEffect } from "react";
 import { useQuery } from "react-query";
 
-export default function HOME() {
+export default function page() {
   const { isLoading, data, isFetching } = useQuery("getPayment", async () => {
     let headersList = {
       Accept: "*/*",
@@ -15,13 +16,10 @@ export default function HOME() {
     });
 
     let data = await response.json();
+    console.log(data);
     return data;
   });
-  const dataArray = [
-    { id: 1, username: 'user1' },
-    { id: 2, username: 'user2' },
-    // Add more data as needed
-  ];
+
   return (
     <>
       <div className="overflow-x-auto">
@@ -39,12 +37,14 @@ export default function HOME() {
                 <td>Loading...</td>
               </tr>
             ) : (
-              dataArray.map((item: any, index: number) => (
-                <tr key={index}>
-                  <td>{item.id}</td>
-                  <td>{item.username}</td>
-                </tr>
-              ))
+              data.data.map((element: any) => {
+                return (
+                  <tr key={element.id}>
+                    <td>{element.id}</td>
+                    <td>{element.username}</td>
+                  </tr>
+                );
+              })
             )}
           </tbody>
         </table>

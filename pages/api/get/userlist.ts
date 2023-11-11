@@ -12,11 +12,13 @@ export default async function handler(
     });
   }
   const prisma = new PrismaClient();
-  try {
-    const transactions = await prisma.tbl_user.findMany();
 
+  try {
+    const transactions = await prisma.tbl_user.findMany()
+    console.log("prisma", transactions);
     return res.status(200).json({ code: 200, data: transactions });
   } catch (e) {
+    console.log(e)
     return res.status(400).json({ code: 400, message: "Something went wrong" });
   } finally {
     prisma.$disconnect();
