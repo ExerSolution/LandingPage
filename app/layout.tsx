@@ -1,7 +1,7 @@
-
 import { QueryClient } from "react-query";
 import "./css/globals.css";
 import type { Metadata } from 'next'
+import { Sidebar } from "flowbite-react";
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,7 +15,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning={true}>{children}</body>
+      <body suppressHydrationWarning={true}>{children}
+      </body>
     </html>
   )
 }

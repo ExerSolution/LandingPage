@@ -72,6 +72,11 @@ body {
 main .formy .forms{
   width:800px;
 }
+
+.sidebar{
+  background-color: #111827;
+}
+
 @media (max-width: 768px) {
   .hidden-on-small-screen {
     display: none;

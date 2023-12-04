@@ -64,7 +64,7 @@ onSubmit={async (values, { resetForm }) => {
   }
 }}
 >
-<Form className="formy min-h-screen flex flex-col items-center justify-center w-full flex-1 px-4 sm:px-20 text-center">
+<Form className="formy min-h-screen flex flex-col items-center justify-center w-full flex-1 px-4 sm:px-20 text-center bg-white">
   <h1 className="flex bg-center text-cyan-700 font-semibold text-3xl pb-10">Register</h1>
     <div className="forms grid gap-6 mb-6 md:grid-cols-2 px-4 sm:px-20">
         <div>
